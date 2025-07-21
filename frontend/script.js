@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ⬇️ *** THIS IS THE MOST IMPORTANT STEP *** ⬇️
     // Replace the placeholder URL with your actual Hugging Face API URL
-    const apiUrl = "https://your-username-your-space-name.hf.space/api/analyze";
+    const apiUrl = "https://pro1222-reflect-ai.hf.space/api/analyze";
 
     const uploadArea = document.getElementById('upload-area');
     const fileInput = document.getElementById('file-input');
