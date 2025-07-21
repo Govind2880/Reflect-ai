@@ -52,12 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Use .replace() to make newlines show up correctly in HTML
                 const formattedText = data.generated_text.replace(/\n/g, '<br>');
                 resultArea.innerHTML = `
-                    <p>
-                        <strong>Age:</strong> ${data.age}<br>
-                        <strong>Gender:</strong> ${data.gender}<br>
-                        <strong>Emotion:</strong> ${data.emotion}
-                    </p>
-                    <hr>
                     <p>${formattedText}</p>
                 `;
             } else {
