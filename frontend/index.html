@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflectAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ ReflectAI</h1>
+            <p>Upload a photo to get an instant facial analysis.</p>
+        </header>
+        <main>
+            <div class="upload-area" id="upload-area">
+                <img id="image-preview" class="hidden" alt="Image preview">
+                <div id="upload-prompt">
+                    <p>Click or Drag & Drop an Image Here</p>
+                </div>
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+            </div>
+            <button id="analyze-btn" disabled>Analyze</button>
+            <div id="loader" class="hidden"></div>
+            <div id="result-area" class="hidden"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
