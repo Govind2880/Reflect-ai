@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Make sure this is your correct backend URL
+    // ⬇️ *** THIS IS THE MOST IMPORTANT STEP *** ⬇️
+    // Replace the placeholder URL with your actual Hugging Face API URL
     const apiUrl = "https://your-username-your-space-name.hf.space/api/analyze";
 
     const uploadArea = document.getElementById('upload-area');
@@ -48,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Display results
             resultArea.classList.remove('hidden');
             if (response.ok) {
-                // We now display the analysis AND the generated text
-                // Using .replace to make newlines show up correctly in HTML
+                // Use .replace() to make newlines show up correctly in HTML
                 const formattedText = data.generated_text.replace(/\n/g, '<br>');
                 resultArea.innerHTML = `
                     <p>
