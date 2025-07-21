@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ⬇️ *** THIS IS THE MOST IMPORTANT STEP *** ⬇️
-    // Replace the placeholder URL with your actual Hugging Face API URL
-    const apiUrl = "https://pro1222-reflect-ai.hf.space/api/analyze";
+    // Make sure this is your correct backend URL
+    const apiUrl = "https://your-username-your-space-name.hf.space/api/analyze";
 
     const uploadArea = document.getElementById('upload-area');
     const fileInput = document.getElementById('file-input');
@@ -49,10 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Display results
             resultArea.classList.remove('hidden');
             if (response.ok) {
+                // We now display the analysis AND the generated text
+                // Using .replace to make newlines show up correctly in HTML
+                const formattedText = data.generated_text.replace(/\n/g, '<br>');
                 resultArea.innerHTML = `
-                    <strong>Age:</strong> ${data.age}<br>
-                    <strong>Gender:</strong> ${data.gender}<br>
-                    <strong>Emotion:</strong> ${data.emotion}
+                    <p>
+                        <strong>Age:</strong> ${data.age}<br>
+                        <strong>Gender:</strong> ${data.gender}<br>
+                        <strong>Emotion:</strong> ${data.emotion}
+                    </p>
+                    <hr>
+                    <p>${formattedText}</p>
                 `;
             } else {
                 resultArea.innerHTML = `<strong>Error:</strong> ${data.error}`;
